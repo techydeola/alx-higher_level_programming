@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-lower = range(97, 122)
-upper = range(65, 90)
+lower = range(97, 123)
+upper = range(65, 91)
 
 
 def uppercase(str):
