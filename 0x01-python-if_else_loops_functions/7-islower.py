@@ -1,9 +1,5 @@
 #!/usr/bin/python3
-letter = "abcdefghijklmnopqrstuvwxyz"
-
-
 def islower(c):
-    if c in letter:
+    if ord(c) >= ord('a') and ord(c) <= ord('z'):
         return True
-    else:
-        return False
+    return False
