@@ -1,6 +1,8 @@
-#!usr/bin/python3
+#!/usr/bin/python3
+
+
 def multiply_by_2(a_dictionary):
-    dict_new = dict(a_dictionary)
-    for key in dict_new:
-        dict_new[key] = dict_new[key] * 2
-    return dict_new
+    new_dict = {}
+    for key, value in a_dictionary.items():
+        new_dict.update({key: (value * 2)})
+    return new_dict
