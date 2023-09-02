@@ -1,0 +1,106 @@
+The ``0-add_integer`` module
+============================
+
+
+
+    """
+    This a a doctest file that test the add_integer
+    function for possible edge cases
+    """
+
+Importing the add_integer module:
+    >>> add_integer = __import__('0-add_integer').add_integer
+    
+Adding 1 and 2:
+    >>> add_integer(1, 2)
+    3
+
+Adding a float and integer:
+    >>> add_integer(4, 2.1)
+    6
+
+Adding a negative integer:
+    >>> add_integer(-2, 3)
+    1
+
+Passing more than one Argument:
+    >>> add_integer(2, 2, 6, 7) # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+                ...
+    TypeError: add_integer() takes from 1 to 2 positional arguments but ... were given
+
+Passing no arguments:
+    >>> add_integer() # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+                ...
+    TypeError: add_integer() missing 1 required positional argument: ...
+
+Passing a string as second Argument:
+    >>> add_integer(4, 'a')
+    Traceback (most recent call last):
+                ...
+    TypeError: b must be an integer
+
+Passing a string as first Argument:
+    >>> add_integer('dc', 5)
+    Traceback (most recent call last):
+                ...
+    TypeError: a must be an integer
+
+Passing only one argument:
+    >>> add_integer(2)
+    100
+
+passing a list as first argument:
+    >>> add_integer([1, 2, 3], 5) # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+                ...
+    TypeError: a must be an integer
+
+passing a list as second argument:
+    >>> add_integer(1, [5, 4]) # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+                ...
+    TypeError: b must be an integer
+
+Passing an undefined character:
+    >>> add_integer(c)  #doctest: +ELLIPSIS
+    Traceback (most recent call last):
+                ...
+    NameError: name ... is not defined
+
+Passing no argument;
+    >>> add_integer() # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+                ...
+    TypeError: add_integer() missing 1 required positional argument: ...
+
+Passing True as first argument:
+    >>> add_integer(True, 3) # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+                ...
+    TypeError: a must be an integer
+
+Passing True as second argument:
+    >>> add_integer(4, True) # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+                ...
+    TypeError: b must be an integer
+
+Passing false as second argument:
+    >>> add_integer(4, False) # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+                ...
+    TypeError: b must be an integer
+
+Passing False as first argument:
+    >>> add_integer(False, 6) # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+                ...
+    TypeError: a must be an integer
+
+Passing True as only argument:
+    >>> add_integer(True) # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+                ...
+    TypeError: a must be an integer
