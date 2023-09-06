@@ -32,7 +32,7 @@ class Rectangle:
     @property
     def height(self):
         """ makes height a private attribute """
-        return self.__heigth
+        return self.__height
 
     @height.setter
     def height(self, value):
