@@ -54,7 +54,10 @@ class Rectangle:
         return 2 * (self.width + self.height)
 
     def __str__(self):
+        """ the str method """
         rectangle_str = ""
+        if self.height == 0 or self.width == 0:
+            return rectangle_str
         for i in range(self.height):
             for j in range(self.width):
                 rectangle_str += "#"
