@@ -31,14 +31,14 @@ class Rectangle:
 
     @property
     def height(self):
-        """ makes heigth a private attribute """
+        """ makes height a private attribute """
         return self.__heigth
 
     @height.setter
     def height(self, value):
-        """ sets heigth with a value  """
+        """ sets height with a value  """
         if not isinstance(value, int):
-            raise TypeError("heigth must be an integer")
+            raise TypeError("height must be an integer")
         if value < 0:
-            raise ValueError("heigth must be >= 0")
+            raise ValueError("height must be >= 0")
         self.__height = value
