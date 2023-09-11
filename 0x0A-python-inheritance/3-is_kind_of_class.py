@@ -3,7 +3,7 @@
 """ This module contains one function """
 
 
-def is_same_class(obj, a_class):
+def is_kind_of_class(obj, a_class):
     """ This checks is an object is an instance
         of a class
 
@@ -11,7 +11,7 @@ def is_same_class(obj, a_class):
                 True if True
                 otherwise: False
     """
-    if type(obj) is a_class:
+    if isinstance(obj, a_class):
         return True
     else:
         return False
