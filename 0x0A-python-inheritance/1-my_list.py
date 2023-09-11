@@ -6,9 +6,7 @@ This module Inherits a class from parent class
 
 
 class MyList(list):
-    def __init__(self):
-        super().__init__(self)
-
+    """ MyList is a class that inherits """
     def print_sorted(self):
         """ this function prints the sorted list """
         print(sorted(self))
