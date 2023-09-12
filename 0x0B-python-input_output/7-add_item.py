@@ -14,7 +14,7 @@ script_arg = sys.argv[1:]
 
 try:
     myList = (load_from_json_file('add_item.json'))
-except:
+except FileNotFoundError:
     myList = []
 
 myList.extend(script_arg)
