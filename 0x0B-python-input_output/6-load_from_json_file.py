@@ -9,7 +9,7 @@ import json
 def load_from_json_file(filename):
     """
         to_json_string - a function that creates an object
-                         froma JSON file
+                         from a JSON file
 
         Return:
                 nothing
