@@ -12,7 +12,7 @@ def save_to_json_file(my_obj, filename):
                          into a file
 
         Return:
-                JSON representation of a string
+                nothing
     """
 
     with open(filename, mode="w", encoding="utf-8") as myFile:
