@@ -31,14 +31,13 @@ class Rectangle(Base):
         if x < 0:
             raise ValueError("x must be >= 0")
 
-        """ y instantiation validation """
         if not isinstance(y, int):
+            """ y instantiation validation """
             raise TypeError("y must be an integer")
         if y < 0:
             raise ValueError("y must be >= 0")
 
-        """ calling the properties of the Base class """
-        super().__init__(id)
+        super().__init__(id)  # calling the properties of the Base class
 
         self.__width = width
         self.__height = height
@@ -70,9 +69,9 @@ class Rectangle(Base):
     def width(self):
         return self.__width
 
-    """width setter method """
     @width.setter
     def width(self, value):
+        """ width setter method """
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value <= 0:
@@ -83,9 +82,9 @@ class Rectangle(Base):
     def height(self):
         return self.__height
 
-    """height setter method """
     @height.setter
     def height(self, value):
+        """height setter method """
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value <= 0:
@@ -96,9 +95,9 @@ class Rectangle(Base):
     def x(self):
         return self.__x
 
-    """x setter method """
     @x.setter
     def x(self, value):
+        """x setter method """
         if not isinstance(value, int):
             raise TypeError("x must be an integer")
         if value < 0:
@@ -109,9 +108,9 @@ class Rectangle(Base):
     def y(self):
         return self.__y
 
-    """y setter method """
     @y.setter
     def y(self, value):
+        """y setter method """
         if not isinstance(value, int):
             raise TypeError("y must be an integer")
         if value < 0:
@@ -130,6 +129,19 @@ class Rectangle(Base):
         for i in range(self.__height):
             print(" " * self.__x + "#" * self.__width)
 
+    def to_dictionary(self):
+        """ this method returns the dictionary representation
+            of a rectangle
+        """
+        return {
+            "x": self.__x,
+            "y": self.__y,
+            "id": self.id,
+            "height": self.__height,
+            "width": self.__width
+            }
+
     def __str__(self):
+        """ class string representation """
         return f"[Rectangle] ({self.id})" + " " + \
             f"{self.__x}/{self.__y} - {self.__width}/{self.__height}"
