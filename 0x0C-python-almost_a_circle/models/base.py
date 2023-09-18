@@ -9,7 +9,7 @@ import turtle
 
 
 class Base:
-    """Represent a Rectangle."""
+    """Represent the base class."""
 
     __nb_objects = 0
 
