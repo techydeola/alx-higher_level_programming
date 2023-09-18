@@ -32,23 +32,18 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
-        """
-            this method writes the JSON string representation of
-            list_objs to a string
-        """
-        fileName = cls.__name__ + ".json"
-        data = []
+        """Write the JSON serialization of a list of objects to a file.
 
-        if list_objs is None:
-            data = []
-        else:
-            for obj in list_objs:
-                if hasattr(obj, 'to_dictionary') and \
-                  callable(getattr(obj, 'to_dictionary')):
-                    data.append(obj.to_dictionary())
-
-        with open(fileName, mode="w", encoding="utf-8") as myFile:
-            json.dump(data, myFile)
+        Args:
+            list_objs (list): A list of inherited Base instances.
+        """
+        filename = cls.__name__ + ".json"
+        with open(filename, "w") as jsonfile:
+            if list_objs is None:
+                jsonfile.write("[]")
+            else:
+                list_dicts = [o.to_dictionary() for o in list_objs]
+                jsonfile.write(Base.to_json_string(list_dicts))
 
     @staticmethod
     def from_json_string(json_string):
