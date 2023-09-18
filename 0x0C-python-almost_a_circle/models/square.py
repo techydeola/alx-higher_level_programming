@@ -10,6 +10,7 @@ class Square(Rectangle):
     """ this class inherits from the rectangle class """
 
     def __init__(self, size, x=0, y=0, id=None):
+        """ initializing method """
         super().__init__(width=size, height=size, x=x, y=y, id=id)
 
     def __str__(self):
