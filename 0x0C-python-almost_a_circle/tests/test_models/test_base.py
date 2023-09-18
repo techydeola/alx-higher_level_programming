@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""Defines unittests for base.py.
-
+"""
 Unittest classes:
     TestBase_instantiation - line 23
     TestBase_to_json_string - line 110
@@ -56,7 +55,7 @@ class TestBase_instantiation(unittest.TestCase):
             print(Base(12).__nb_instances)
 
     def test_str_id(self):
-        self.assertEqual("hello", Base("hello").id)
+        self.assertEqual("hello world", Base("hello world").id)
 
     def test_float_id(self):
         self.assertEqual(5.5, Base(5.5).id)
