@@ -5,7 +5,7 @@ let arg2 = process.argv[3];
 arg1 = parseInt(arg1);
 arg2 = parseInt(arg2);
 
-function add(a, b) {
+function add (a, b) {
   console.log(a + b);
 }
 
