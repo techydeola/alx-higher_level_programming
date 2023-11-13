@@ -10,7 +10,7 @@ function factorial (number) {
   if (number === 0) {
     return 1;
   }
-  let result = number * (factorial(number - 1));
+  const result = number * (factorial(number - 1));
   return result;
 }
 
