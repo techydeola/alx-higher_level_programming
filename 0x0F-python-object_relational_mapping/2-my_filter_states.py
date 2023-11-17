@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3
+#!/usr/bin/python3
 """
     This module lists all states from the database hbtn_0e_0_usa
 """
@@ -13,7 +13,7 @@ if __name__ == "__main__":
     c = db.cursor()
 
     c.execute("SELECT * FROM states "
-              "WHERE name='{}' "
+              "WHERE name LIKE BINARY '{}' "
               "ORDER BY id ASC".format(sys.argv[4]))
 
     rows = c.fetchall()
